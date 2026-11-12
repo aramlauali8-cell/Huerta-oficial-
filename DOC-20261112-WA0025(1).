@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🌱%3C/text%3E%3C/svg%3E">
+  <title>Huerta Mágica | Kit de jardinería para niños</title>
+  <meta name="description" content="Kit Sembrando Vida: palitas, regadera pequeña, vasitos biodegradables, tierra, abono y semillas para niños.">
+
+  <!-- Bootstrap oficial (CDN) -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="bootstrap-lite.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<!-- BARRA SUPERIOR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="Huerta Mágica, inicio">
+      <span id="logoBox" class="logo-box">🌱</span>
+    </a>
+    <div class="d-flex align-items-center gap-2 order-lg-2">
+      <button class="btn btn-sm btn-outline-secondary" id="btnAdmin" aria-label="Modo admin">🔒</button>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menú"><span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#objetivo">Objetivo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#como-comprar">Cómo comprar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#preguntas">Preguntas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- INICIO -->
+<header class="hero" id="inicio">
+  <span class="flota" style="left:4%;top:12%;animation-delay:0s">🌻</span><span class="flota" style="left:88%;top:18%;animation-delay:1s">🦋</span><span class="flota" style="left:46%;top:6%;animation-delay:2s">🍀</span><span class="flota" style="left:92%;top:70%;animation-delay:0.5s">🌈</span><span class="flota" style="left:8%;top:75%;animation-delay:1.5s">🐞</span>
+  <div class="container">
+    <div class="marca-hero" aria-label="Huerta Mágica">Huerta Mágica</div>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h1>Pequeñas manos, grandes aprendizajes</h1>
+        <p class="lema mt-3">Un kit de jardinería para que niñas y niños siembren, rieguen y vean crecer su propia planta, sin pantallas y en familia.</p>
+        <a href="#productos" class="btn btn-huerta btn-lg me-2">Ver kits</a>
+        <a href="#como-comprar" class="btn btn-sol btn-lg">¿Cómo compro?</a>
+      </div>
+      <div class="col-lg-5">
+        <div class="hero-caja">
+          <div class="emojis">⛏️🚿🌱</div>
+          <h3 class="mt-2 text-success">Kit Sembrando Vida</h3>
+          <p class="mb-0">Palitas · regadera · vasitos biodegradables · tierra · abono · semillas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="franja"></div>
+
+<!-- CARRUSEL -->
+<section class="gal" id="galeria"><div class="container">
+  <div class="carrusel" id="carrusel">
+    <div id="slides"></div>
+    <button class="car-btn izq" onclick="ir(ci-1)" aria-label="Foto anterior">‹</button>
+    <button class="car-btn der" onclick="ir(ci+1)" aria-label="Foto siguiente">›</button>
+    <div class="puntos" id="puntos"></div>
+  </div>
+</div></section>
+
+<!-- PRODUCTOS -->
+<section id="productos">
+  <div class="container">
+    <h2 class="titulo text-center">Nuestros kits</h2>
+    <p class="text-center mb-4">Precios en bolivianos (Bs). Empaque pequeño, fácil de guardar y llevar.</p>
+    <div class="grid-prod" id="listaProductos"></div>
+  </div>
+</section>
+
+<!-- OBJETIVO -->
+<section id="objetivo" class="obj">
+  <div class="container">
+    <h2 class="titulo text-center mb-3">🎯 Nuestro objetivo</h2>
+    <p class="obj-general">Implementar la “Huerta Mágica” con niñas y niños de Educación Inicial, usando el kit “Sembrando Vida”, para fortalecer su desarrollo integral, la motricidad fina, la creatividad, el lenguaje, las nociones matemáticas y los valores de responsabilidad, cooperación y respeto por la naturaleza.</p>
+    <div class="row g-3">
+      <div class="col-md-6"><div class="obj-card"><span>🔎</span>Promovemos la curiosidad y la exploración de la naturaleza con semillas, tierra, agua y plantas.</div></div>
+      <div class="col-md-6"><div class="obj-card"><span>✋</span>Fortalecemos la motricidad fina y las nociones matemáticas: sembrar, contar, clasificar y comparar.</div></div>
+      <div class="col-md-6"><div class="obj-card"><span>🎨</span>Desarrollamos el lenguaje, la creatividad y la expresión artística y sensorial.</div></div>
+      <div class="col-md-6"><div class="obj-card"><span>🤝</span>Integramos valores de responsabilidad, cooperación y respeto por los seres vivos junto a las familias.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios">
+  <div class="container text-center">
+    <span class="deco" style="left:4%;top:8%">🌼</span><span class="deco" style="right:5%;top:12%;animation-delay:1s">🦋</span><span class="deco" style="left:6%;bottom:6%;animation-delay:2s">🍀</span><span class="deco" style="right:6%;bottom:8%;animation-delay:.5s">🐞</span>
+    <h2 class="titulo mb-2">¿Qué aprenden los niños?</h2>
+    <p class="sub">Jugando en la huerta, ¡crecen ellos también! 🌟</p>
+    <div class="row g-3">
+      <div class="col-6 col-md-3"><div class="ben b1"><div class="ben-ico">✋</div><h5>Motricidad fina</h5><p>Al manipular semillas, tierra y herramientas pequeñas.</p></div></div>
+      <div class="col-6 col-md-3"><div class="ben b2"><div class="ben-ico">🔍</div><h5>Observación</h5><p>Ven cómo germina y crece su planta día a día.</p></div></div>
+      <div class="col-6 col-md-3"><div class="ben b3"><div class="ben-ico">🤝</div><h5>Valores</h5><p>Responsabilidad, cooperación y respeto por la naturaleza.</p></div></div>
+      <div class="col-6 col-md-3"><div class="ben b4"><div class="ben-ico">👨‍👩‍👧</div><h5>En familia</h5><p>Mamá, papá e hijos comparten la actividad.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO COMPRAR -->
+<section id="como-comprar">
+  <div class="container">
+    <h2 class="titulo text-center mb-4">¿Cómo comprar?</h2>
+    <div class="pasos">
+      <div class="paso"><span class="num">1</span><div class="ico">🛍️</div><h5>Elige</h5><p>Agrega los kits que quieras al carrito.</p></div>
+      <div class="paso"><span class="num">2</span><div class="ico">👛</div><h5>Paga</h5><p>Por QR (Yape o Yasta) o en efectivo.</p></div>
+      <div class="paso"><span class="num">3</span><div class="ico">💬</div><h5>WhatsApp</h5><p>Tu pedido llega a nuestro WhatsApp.</p></div>
+      <div class="paso"><span class="num">4</span><div class="ico">📦</div><h5>Recibe</h5><p>Coordinamos entrega o recojo en agencia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section id="preguntas" style="background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,243,196,.9))">
+  <div class="container" style="max-width:800px">
+    <h2 class="titulo text-center mb-4">Preguntas frecuentes</h2>
+    <div class="accordion" id="faq">
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">¿Para qué edad es?</button></h3>
+        <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Para niñas y niños de educación inicial (prekínder y kínder), siempre acompañados por un adulto.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">¿Qué formas de pago hay?</button></h3>
+        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Por código QR (Yape o Yasta) o en efectivo al momento de la entrega.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">¿Cómo recibo mi kit?</button></h3>
+        <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Entregamos en lugares concurridos o lo dejamos en una agencia de paquetería para que lo recojas con los datos de tu pedido.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4">¿Los materiales son seguros?</button></h3>
+        <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí. Usamos semillas no tóxicas, herramientas pequeñas sin filos y vasitos biodegradables. Recomendamos lavarse las manos antes y después de la actividad.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<footer id="contacto">
+  <div class="container text-center">
+    <h5 class="mb-1">📬 Contáctanos</h5>
+    <p class="small mb-2">Escríbenos para pedidos, dudas o coordinar tu entrega.</p>
+    <div id="redes" class="redes"></div>
+    <p class="mt-2 mb-0 opacity-75" style="font-size:.75rem">🌱 Huerta Mágica · Hecho por Aram</p>
+  </div>
+</footer>
+
+<div id="lluvia" aria-hidden="true"></div>
+<button class="burbuja" id="burbuja" aria-label="Abrir carrito (puedes arrastrarlo)">🛒<span id="contador" class="cnt">0</span></button>
+
+<!-- CARRITO -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="panelCarrito">
+  <div class="offcanvas-header cart-head">
+    <h5 class="offcanvas-title">Tu carrito</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="itemsCarrito" class="flex-grow-1"></div>
+    <div id="pieCarrito">
+      <div class="total-box"><div><small>Total a pagar</small><div class="n-items" id="nItems"></div></div><span class="monto" id="total">Bs 0</span></div>
+      <label class="et" for="nombre">Tu nombre</label>
+      <input id="nombre" class="form-control mb-3" placeholder="Escribe tu nombre" autocomplete="name">
+      <div class="et">Forma de pago</div>
+      <div class="pagos mb-3">
+        <label class="pago"><input type="radio" name="pago" id="pagoQr" value="QR" checked><span class="in"><span class="ic">📱</span><b>Pagar por QR</b><small>Yape / Yasta</small></span></label>
+        <label class="pago"><input type="radio" name="pago" id="pagoEfe" value="Efectivo"><span class="in"><span class="ic">💵</span><b>Efectivo</b><small>Al recibir</small></span></label>
+      </div>
+      <button class="btn btn-huerta w-100 btn-lg" id="btnPedir">Finalizar pedido</button>
+      <button class="btn btn-link text-danger w-100 mt-1" id="btnVaciar">Vaciar carrito</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL QR -->
+<div class="modal fade" id="modalQr" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header"><h5 class="modal-title">Paga con QR</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+      <div class="modal-body">
+        <p class="fs-5">Monto a pagar: <strong id="montoQr"></strong></p>
+        <div class="row g-2 justify-content-center">
+          <div class="col-6"><img class="qr-img" src="images/qr-yape.png" alt="QR Yape" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27200%27 height=%27200%27%3E%3Crect width=%27200%27 height=%27200%27 fill=%27%23eee%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%27middle%27 font-size=%2716%27 fill=%27%23777%27%3EAquí va tu QR%3C/text%3E%3C/svg%3E'"><p class="small mb-0">Yape</p></div>
+          <div class="col-6"><img class="qr-img" src="images/qr-yasta.png" alt="QR Yasta" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27200%27 height=%27200%27%3E%3Crect width=%27200%27 height=%27200%27 fill=%27%23eee%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%27middle%27 font-size=%2716%27 fill=%27%23777%27%3EAquí va tu QR%3C/text%3E%3C/svg%3E'"><p class="small mb-0">Yasta</p></div>
+        </div>
+        <p class="small text-muted mt-3 mb-0">Después de pagar, toca el botón y envía tu pedido por WhatsApp junto con la captura del pago.</p>
+      </div>
+      <div class="modal-footer"><button class="btn btn-huerta w-100" id="btnYaPague">💬 Ya pagué, enviar pedido</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="barra-admin" id="barraAdmin" hidden>🛠️ Modo admin
+  <button class="btn btn-sm btn-sol" id="btnPanel">⚙️ Panel</button>
+  <button class="btn btn-sm btn-outline-secondary" id="btnSalir" style="background:#fff">Salir</button></div>
+<input type="file" id="fotoProd" accept="image/*" hidden>
+<div class="modal fade" id="modalProd" tabindex="-1"><div class="modal-dialog"><div class="modal-content">
+  <div class="modal-header"><h5 class="modal-title">✏️ Editar producto</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+  <div class="modal-body">
+    <label class="small" for="e_nombre">Nombre</label><input id="e_nombre" class="form-control mb-2">
+    <div class="d-flex gap-2"><div style="flex:1"><label class="small" for="e_precio">Precio (Bs)</label><input id="e_precio" type="number" min="1" class="form-control mb-2"></div>
+    <div style="flex:1"><label class="small" for="e_stock">Stock</label><input id="e_stock" type="number" min="0" class="form-control mb-2" placeholder="sin límite"></div></div>
+    <label class="small" for="e_desc">Descripción</label><input id="e_desc" class="form-control mb-2">
+    <label class="small" for="e_items">Qué incluye (separado por comas)</label><input id="e_items" class="form-control mb-2">
+    <div class="d-flex gap-2"><div style="flex:1"><label class="small" for="e_etiqueta">Etiqueta</label><input id="e_etiqueta" class="form-control mb-2"></div>
+    <div style="flex:1"><label class="small" for="e_emoji">Emoji</label><input id="e_emoji" class="form-control mb-2"></div></div>
+    <label class="small" for="e_foto">Cambiar foto</label><input id="e_foto" type="file" accept="image/*" class="form-control">
+  </div>
+  <div class="modal-footer"><button class="btn btn-huerta w-100" id="btnGuardarProd">Guardar cambios</button></div>
+</div></div></div>
+
+<div class="modal fade" id="modalLogin" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h5 class="modal-title">🔒 Modo admin</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+  <div class="modal-body"><label class="mb-2" for="codAdmin">Escribe el código de administrador</label>
+    <input id="codAdmin" type="password" class="form-control" autocomplete="off"><div id="errCod" class="text-danger small mt-2"></div></div>
+  <div class="modal-footer"><button class="btn btn-huerta w-100" id="btnEntrar">Entrar</button></div>
+</div></div></div>
+
+<div class="modal fade" id="modalAdmin" tabindex="-1"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content">
+  <div class="modal-header"><h5 class="modal-title">⚙️ Panel de administración</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+  <div class="modal-body">
+    <h6>📞 Contactos</h6>
+    <input id="c_whatsapp" class="form-control mb-2" placeholder="WhatsApp (ej: 77579228)">
+    <input id="c_tiktok" class="form-control mb-2" placeholder="TikTok (usuario o enlace)">
+    <input id="c_facebook" class="form-control mb-2" placeholder="Facebook (usuario o enlace)">
+    <input id="c_instagram" class="form-control mb-2" placeholder="Instagram (usuario o enlace)">
+    <button class="btn btn-huerta w-100 mb-3" id="btnGuardarContactos">Guardar contactos</button>
+    <h6>🌱 Logotipo</h6>
+    <input type="file" id="logoFile" accept="image/*" class="form-control mb-2">
+    <button class="btn btn-sm btn-outline-secondary mb-3" id="btnQuitarLogo">Quitar logo</button>
+    <h6>🖼️ Fotos del carrusel</h6>
+    <input type="file" id="fotosCarrusel" accept="image/*" multiple class="form-control mb-2">
+    <div id="miniaturas" class="d-flex gap-2" style="flex-wrap:wrap"></div>
+    <h6 class="mt-3">➕ Nuevo producto</h6>
+    <input id="p_nombre" class="form-control mb-2" placeholder="Nombre del producto">
+    <input id="p_precio" type="number" min="1" class="form-control mb-2" placeholder="Precio en Bs">
+    <input id="p_desc" class="form-control mb-2" placeholder="Descripción corta">
+    <input id="p_items" class="form-control mb-2" placeholder="Qué trae (separado por comas)">
+    <input id="p_stock" type="number" min="0" class="form-control mb-2" placeholder="Stock (vacío = sin límite)">
+    <input id="p_emoji" class="form-control mb-2" placeholder="Emoji (ej: 🌵)">
+    <input id="p_foto" type="file" accept="image/*" class="form-control mb-2">
+    <button class="btn btn-huerta w-100" id="btnAddProd">Agregar producto</button>
+  </div>
+</div></div></div>
+
+<script src="bootstrap-lite.js"></script>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="contacto.js"></script>
+<script src="carrusel.js"></script>
+<script src="productos.js"></script>
+<script src="carrito.js"></script>
+<script src="admin.js"></script>
+<script src="efectos.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
