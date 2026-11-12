@@ -1,0 +1,26 @@
+    /* ===== Carrito más visible ===== */
+    .offcanvas{width:440px}
+    .cart-head{background:linear-gradient(135deg,var(--verde),var(--verde-osc));color:#fff;padding-bottom:1.1rem}
+    .cart-head .offcanvas-title{font-size:1.6rem;color:#fff}
+    .cart-head .btn-close{color:#fff;font-size:2rem}
+    .offcanvas-body{background:#fffaf0}
+    .item-carrito{background:#fff;border:2px solid #d5ecd0;border-radius:18px;padding:.9rem 1rem;margin-bottom:.8rem;box-shadow:0 3px 10px rgba(39,98,51,.08)}
+    .item-carrito strong{font-size:1.05rem;color:var(--verde-osc)}
+    .qty button{width:40px;height:40px;font-size:1.3rem;font-weight:700;border-color:var(--verde);color:var(--verde)}
+    .qty .cant{min-width:1.6rem;text-align:center;font-weight:700;font-size:1.2rem}
+    .sub-l{margin-top:.5rem;padding-top:.5rem;border-top:1px dashed #d5ecd0;text-align:right;font-size:.95rem}
+    .total-box{display:flex;align-items:center;justify-content:space-between;background:var(--verde-osc);color:#fff;border-radius:20px;padding:1rem 1.2rem;margin:.5rem 0 1rem;box-shadow:0 6px 16px rgba(39,98,51,.3)}
+    .total-box small{font-size:.95rem;opacity:.9}.total-box .n-items{font-size:.8rem;opacity:.75}
+    .total-box .monto{font-family:'Fredoka',sans-serif;font-size:2.2rem;font-weight:700;color:var(--amarillo);line-height:1}
+    .et{font-weight:700;color:var(--verde-osc);margin-bottom:.35rem;display:block}
+    .pagos{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+    .pago{position:relative;cursor:pointer;display:block}
+    .pago input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+    .pago .in{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.15rem;padding:.5rem;background:#fff;border:3px solid #d5ecd0;border-radius:22px;transition:.15s;position:relative}
+    .pago .ic{font-size:2.6rem;line-height:1}.pago b{font-family:'Fredoka',sans-serif;font-size:1.1rem;color:var(--verde-osc)}.pago small{color:#5b6b7a}
+    .pago input:checked+.in{border-color:var(--verde);background:#dff1d2;box-shadow:0 0 0 4px rgba(63,143,74,.22)}
+    .pago input:checked+.in::after{content:"✓";position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .pago input:focus-visible+.in{outline:3px solid var(--azul);outline-offset:2px}
+    /* ===== Carrito fijo, fácil de alcanzar con el pulgar ===== */
+    .burbuja{position:fixed!important;right:16px!important;left:auto!important;top:auto!important;bottom:calc(18px + env(safe-area-inset-bottom,0px))!important;cursor:pointer;touch-action:manipulation}
+    .toast-hm{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
